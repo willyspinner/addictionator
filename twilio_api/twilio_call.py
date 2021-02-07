@@ -16,7 +16,7 @@ class TwilioAPI:
 
 		self.call_domain = 'http://twimlets.com/echo?Twiml='
 
-	def do_remind_call(self, phone_number):
+	def do_remind_call(self, phone_number:str):
 		"""
 		see this: https://www.twilio.com/labs/twimlets/echo
 		Input:
@@ -34,7 +34,7 @@ class TwilioAPI:
 		)
 		return call
 		
-	def do_remind_sms(self, phone_number):
+	def do_remind_sms(self, phone_number:str):
 		"""
 		Input:
 			- phone_number: phone number to send calls to
