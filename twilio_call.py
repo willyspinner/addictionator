@@ -20,3 +20,11 @@ def do_remind_call(phone_number):
                           from_=twilio_phone_number
                       )
     
+def do_remind_sms(phone_number):
+  client.messages.create(
+                       body="Hello. How are you doing? What are you doing playing league so much. Time to quit please.",
+                       to=phone_number,
+                       from_=twilio_phone_number
+                 )
+
+  
