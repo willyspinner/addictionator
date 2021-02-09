@@ -43,3 +43,12 @@ class LeagueAPI:
 		encrypted_summoner_id = self.get_encrypted_summoner_id(summoner_name)
 		res = self.create_base_request(f'/lol/spectator/v4/active-games/by-summoner/{encrypted_summoner_id}')
 		return res.json()
+
+	def check_active(self, summoner_name:str):
+		"""
+		"""
+
+    	res = self.get_active_game(summoner_name)
+        if res['status']['status_code'] == 404:
+            return False
+        return True
